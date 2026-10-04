@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+import os
 import json
 import math
 import re
@@ -8,12 +8,12 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
-
+HOST = os.getenv("HOST", "0.0.0.0")
+PORT = int(os.getenv("PORT", "5000"))
 ROOT = Path(__file__).resolve().parent
 STATIC = ROOT / "static"
 TEMPLATES = ROOT / "templates"
-HOST = "127.0.0.1"
-PORT = 5000
+
 
 # -----------------------------
 # Tiny self-contained ML layer
