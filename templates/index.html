@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NiveshRakshak | Check Before You Trust</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">NR</span><span>NiveshRakshak</span></div>
+  <div class="nav-note">SANGYAN • Investor Safety Prototype</div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="eyebrow">CHECK BEFORE YOU TRUST</div>
+    <h1>Protect the investor<br><span>before the money moves.</span></h1>
+    <p class="lead">Analyze suspicious investment messages and links. NiveshRakshak highlights risk signals, explains why they matter, and points users toward safer next steps.</p>
+    <div class="hero-badges"><span>AI-assisted</span><span>Multilingual UI</span><span>No investment advice</span><span>Privacy-first prototype</span></div>
+  </section>
+
+  <section class="workspace">
+    <div class="card input-card">
+      <div class="section-head">
+        <div><div class="kicker">1 • INPUT</div><h2>Check suspicious content</h2></div>
+        <select id="language" class="language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="hinglish">Hinglish</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </div>
+
+      <label for="message">Investment message</label>
+      <textarea id="message" rows="7" placeholder="Paste a WhatsApp / Telegram / SMS / social-media investment message here..."></textarea>
+
+      <div class="quick-row">
+        <button class="chip" data-demo="scam">Try scam example</button>
+        <button class="chip" data-demo="safe">Try safer example</button>
+        <button class="chip" data-demo="hindi">Try Hindi example</button>
+      </div>
+
+      <label for="url">Suspicious URL <span class="muted">optional</span></label>
+      <input id="url" type="text" placeholder="https://example.com">
+
+      <div class="upload-panel">
+        <div>
+          <strong>Screenshot analysis</strong>
+          <p>OCR runs in your browser. The image is not sent to the analysis API.</p>
+        </div>
+        <label class="upload-btn" for="screenshot">Upload screenshot</label>
+        <input id="screenshot" type="file" accept="image/*" hidden>
+      </div>
+      <div id="ocr-status" class="ocr-status"></div>
+
+      <button id="analyze" class="primary">Analyze for risk <span>→</span></button>
+      <div id="error" class="error hidden"></div>
+    </div>
+
+    <aside class="card why-card">
+      <div class="kicker">WHAT WE CHECK</div>
+      <div class="feature"><div class="icon">⚠</div><div><strong>Scam indicators</strong><p>Return promises, urgency, payment requests, impersonation and withdrawal patterns.</p></div></div>
+      <div class="feature"><div class="icon">◎</div><div><strong>Explainability</strong><p>Users see the signals behind a result instead of a black-box “scam” label.</p></div></div>
+      <div class="feature"><div class="icon">⌁</div><div><strong>Bharat-first</strong><p>English, Hinglish and Hindi presentation with simple safety guidance.</p></div></div>
+      <div class="feature"><div class="icon">✓</div><div><strong>Safety boundary</strong><p>No buy/sell/hold recommendations or return predictions.</p></div></div>
+    </aside>
+  </section>
+
+  <section id="result" class="result-card hidden"></section>
+
+  <section class="card demo-strip">
+    <div><div class="kicker">JUDGE DEMO</div><h3>Recommended 45-second live flow</h3><p>Paste the scam example → analyze → show the warning signals → switch to Hindi → show the safety actions.</p></div>
+    <button id="fill-demo" class="secondary">Load demo message</button>
+  </section>
+
+  <section class="resources-grid">
+    <a class="resource" href="https://investor.sebi.gov.in/" target="_blank" rel="noopener"><span>SEBI Investor</span><small>Official investor education & resources ↗</small></a>
+    <a class="resource" href="https://scores.sebi.gov.in/" target="_blank" rel="noopener"><span>SEBI SCORES</span><small>Official complaint redressal portal ↗</small></a>
+    <a class="resource" href="https://scores.sebi.gov.in/entity-status" target="_blank" rel="noopener"><span>Entity Details</span><small>Official entity-status lookup ↗</small></a>
+  </section>
+
+  <footer>
+    <p><strong>Prototype boundary:</strong> NiveshRakshak is not an official SEBI verification service. A LOW result never guarantees that content is genuine or safe.</p>
+  </footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
