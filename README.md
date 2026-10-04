@@ -1,5 +1,5 @@
 # NiveshRakshak
-
+## PROJECT LINK: https://niveshrakshak.onrender.com
 **AI-Powered Investor Safety & Scam Resilience Platform**
 
 NiveshRakshak is an investor-safety application that helps users assess suspicious financial messages, screenshots, and URLs before taking potentially harmful actions. It combines lightweight machine learning, transparent safety rules, URL heuristics, screenshot OCR, and simple multilingual presentation to provide an explainable early-warning assessment.
